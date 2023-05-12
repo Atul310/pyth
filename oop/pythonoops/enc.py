@@ -16,7 +16,7 @@
 # method in python it becomes the {private } attriubute(variable)
 #and  method
 
-# When we creatae a provate variable 
+# When we creatae a private variable 
 # then in memory our variable changes  to 
 # suppose the variable name = __VariableName
 #_className__variableName 

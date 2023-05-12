@@ -31,3 +31,17 @@ class Animal :
     
 ab = Animal()
 
+
+
+class Person:
+    def __init__(self,name,age):
+        self.name = nam
+        self.age =ag
+
+
+
+def greet(Person):
+    pass
+    
+p = Person("Atul", 21)
+greet(p)

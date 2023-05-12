@@ -31,10 +31,13 @@
 # getter and setter method helps to show and change the
 # private variable and method
 
+## Make variable and method private as much as possible
+## 
+
 class ATM:
     def __init__(self):
-        self.pin =""
-        self.balance =0
+        self.__pin ="" # this became private  by __
+        self.__balance =0
         self.menu()
         
     def menu(self):
@@ -52,26 +55,11 @@ class ATM:
            self.chage_pin()
        elif user_input=="3":
            self.check_balance()
-        
-    
-    
-        
-    
-    
-           
-    
-    
-           
-           
-           
-         
-           
-      
     def create_pin(self):
         Usr_pn = input("enter pin")
         self.pin =Usr_pn
         usr_bal = input("enter balanec")
-        self.balance= usr_bal
+        self.__balance= usr_bal
         print("created pin")
         self.menu()
     def chage_pin(self):
@@ -97,7 +85,7 @@ class ATM:
             #print("enter the amount to withdraw")
             amount = int(input("enter ampunt"))
             if amount <= self.balance:
-             slef.balance= balance-amount
+             slef.__balance= __balance-amount
              print("withdrawn successfull")
             else:
                 print("try agatin")
@@ -106,11 +94,16 @@ class ATM:
         
         else:
             print("please correct your pin and try again")
-        self.menu()
-    
-            
-        
-        
-        
-        
+        self.menu()       
 a = ATM()
+# a.__balance = # it doesntot work 
+#because we cannot excess the private variable by 
+# using the samme private  variable 
+# the variable stores as _ATM__balance in the memory 
+#location 
+
+
+#use of getter and setter 
+# we can give privelage to change the 
+# private variable and method and set the variable and
+#value throught the help of function
